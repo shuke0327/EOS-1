@@ -10,35 +10,35 @@
 
 有关POS与DPOS的讨论，看起来像是一个哲学辩题。我阅读、听取了各种各样的观点，有些非常尖锐，像是论战。从技术的角度来看，我觉得这两个系统都有抵御攻击能力，没有哪个一个方法更脆弱，两种方法都是可行的。为什么要进行比较和选择呢？因为，虽然这两种方法都是可行的，但我认为它们会产生非常不同的区块链。
 
-在POS成为一块生产者，我需要攸关键，并有适当的硬件运行软件。 就是这样。 实施则需要在没有任何更多的参与。 硬件的障碍是显着的。 多好，没有可运行的软件吗？ 也许是系统将设计，将能够利用分布式/完全不同的计算能力使一个非常分散的平台。 如果任何人都有甚至一小股和一个家里的电脑可以参与，这将是巨大的。 But it's a challenging problem. I hope it can be done in a scalable way with low latency and sufficient transaction throughput. I hope that it can be done in a way that can succeed.
+在POS成为一块生产者，我需要攸关键，并有适当的硬件运行软件。 就是这样。 实施则需要在没有任何更多的参与。 硬件的障碍是显着的。 多好，没有可运行的软件吗？ 也许是系统将设计，将能够利用分布式/完全不同的计算能力使一个非常分散的平台。 如果任何人都有甚至一小股和一个家里的电脑可以参与，这将是巨大的。 但这是一个具有挑战性的问题。 我希望它可以在一个可扩展的方式，用较低的延迟和足够的交易的吞吐量。 我希望它可以在一个方法，可以取得成功。
 
 对于POS，要成为出块人，需要拥有一定的权益证明（代币），并有合适的硬件来运行软件。如此而已。系统一旦开始开始运行，便不再需要人的参与。硬件投入是主要的。它运行软件的情况如何？也许系统可以设计为，充分利用分布式计算的一个去中心化平台。这样，即使是小额的权益（代币）和家用电脑也可以参与出块，那将是非常不错的。但这里有个富有挑战问题：我希望它能够以可扩展的方式完成，具有低延迟和足够的吞吐量。我希望能够找到一种合适的方式。
 
-In DPOS block producers are voted in and campaign for the privilege, perhaps offering something more, working harder. More concentrated and powerful hardware that allows the platform to scale is deployed in the service of the community. Steemit has 21 block producers with many more at the ready waiting for your vote, campaigning for your attention. The voting makes the system agile. DPOS can respond to change more easily since change is not always a code change. Change, for some things, is only as far away as a vote. DPOS puts the community centre stage. It asks us to participate, requires us to pay attention. When B1 talks about aligning interests it is human interests that they are talking about, it is human interests that are being aligned. Not just the consensus algorithm's interests. You express your interests with your vote.
+在残疾人组织的框生产商投票和竞选的权限，也许提供更多的东西，工作困难。 更集中和强大的硬件，让平台的规模部署在服务的社区。 Steemit有21块生产者有更多准备好等候您的投票，竞选活动的关注。 投票使得该系统敏捷。 残疾人组织可以应对变化更加容易，因为改变不总是一代的变化。 变化，对于一些事情，只是为遥远，因为进行表决。 残疾人组织把社区中心的阶段。 它要求我们参与，需要我们给予注意。 当B1谈调整的利益，这是人类的利益，他们正在谈论的，它是人类的利益，正在对准。 不仅仅是协商一致算法的利益。 你表达你的利益与你的投票。
 
 对于DPOS，出块人由投票选出，他们需要努力竞选以争取出块权，也许是提供更多的东西，或者工作更加努力。更加集中和强大的硬件，允许平台获得良好扩展性，部署以服务于社区。 Steemit有21个出块者，并有更多的候选出块者等待投票，并努力竞选以吸引你的注意。投票使系统更加灵活。 DPOS可以更方便地响应变更，因为变更并不总是代码变更。对某些事情而言，变更像投票一样遥远地存在。 DPOS使社区成为舞台中心。它要求我们积极地参与，要我们投入更多的注意力。当B1谈论协调利益时，讨论的是人的利益，是人的利益被调整。这不只是共识算法的事情。您需要通过投票表达您的利益。
 
-I'd like to see POS ala ethereum, rchain, cardano etc. go forward. I can't wait to see what happens, to see how they evolve. They might be well suited to some types of applications where human voting is actually not desired. Where humans get in the way. Maybe human voting is fundamentally flawed.
+我想看看POS ala复仇，rchain的，卡尔达诺等。 前进。 我等不及要看看会发生什么情况，看看他们如何发展。 他们可能很好地适用于某些类型的应用程序的人投票实际上是不需要的。 在人类的方式获得。 也许人投票是根本性的缺陷。
 
 我很希望看到POS应用，像ethereum，rchain，cardano等等。我已迫不及待地想看看会发生什么，看看它们是如何发展的。它们可能非常适合，某些不需要人类投票的应用。在某些地方，人本身是一种障碍，人的投票有缺陷。
 
-Or maybe if we can't participate, if we can't co-operate, if we can't be bothered to understand the issues and cast our votes then we are stuffed anyway.
+或者，也许，如果我们不能参加，如果我们不能共同操作，如果我们不能不屑于理解问题和投我们的票然后我们都塞了。
 
 或者我们无法参与，或者我们无法合作，或者我们不能费心去理解问题，投票像是废物一样无意义。
 
-POS versus DPOS. An interesting debate! There is fantastic research going on around POS that will undoubtedly lead somewhere. I am certain that important benefits will emerge. But so too with DPOS. I guess that what I am really arguing is that DPOS has certain properties that make it central to the decentralization of politics and governance. It is the only consensus algorithm that is socially disruptive in a good way! The AI apocalypse is less likely under DPOS! BTS and Steemit prove that strong communities can form around DPOS. Of course there is more to be done, but that's up to us. This article by @samupaha talks about how DPOS could evolve to become even more human centric, how it could be even more in the service of and run by us humans. A great post.
+POS与残疾人组织的。 一个有趣的辩论！ 还有梦幻般的研究会POS那无疑将导致在某个地方。 我确信，重要的好处将显现出来。 但这样也与残疾人组织的。 我猜这是什么我真的争论是，残疾人组织具有一定的属性，使它的中央权力下放的政治和治理。 它是唯一的协商一致的算法是破坏性的社会的一个好办法! AI启示是不太可能在残疾人组织的！ BTS和Steemit证明，强大的社区可以形成周围的残疾人组织的。 当然有更多的工作要做，但这是给我们。 这篇文章通过@samupaha谈如何残疾人组织可能会演变成为甚至更多的人为中心，它如何能够甚至更多的服务和运行通过我们人类。 一个伟大的职位。
 
 POS与DPOS，是一个有趣的讨论！围绕POS已经有一些不错的研究，这些研究在某些地方得到了应用。我敢肯定，一些重要的成果将会出现。 DPOS也是如此。我想我真正在要讨论的是，DPOS具有某些属性，使其成为去中心化的政治和治理架构下的核心。它是唯一一种，通过良好的方式，进行社会干预的共识方法。在DPOS条件下，人工智能接管世界的事情不太可能发生！ BTS和Steemit，证明强大的社区可以通过DPOS形成。当然还有很多的事情要做，这取决于我们的努力。 @samupaha的这篇文章谈论了DPOS将如何更加以人为中心进行发展，如何能够更多的服务于我们人类，并由我们人类来运行管理。一个很不错的帖子。
 
-At the end of the day we are building these systems for us humans aren't we? Which consensus algorithm do you vote for?
+在一天结束时我们正在建立这些系统对我们人类不是吗？ 成协商一致的算法你投票了吗？
 
-最后，我们正在为我们人类自己构建系统，不是吗？ 你投票支持哪种共识算法？
+中我们正在为我们人类自己构建系统，通过？ 你投票支持哪种共识算法？
 
-While it will be interesting to see how it all plays out in the years ahead I believe that we need a scalable platform now. ASAP. And notwithstanding some unexpected developments elsewhere I believe that platform is EOS!
+虽然这会很有趣，看到这一切是如何发挥出在今后几年里我认为，我们需要一个可伸缩的平台。 尽快解决。 尽管一些意外其他地方的事态发展，我认为，平台是EOS!
 
-虽然，在未来的时间里，看到结果如何呈现出来，是很有趣的事情。但我相信，现在最重要的是，我们要尽快的有一个可扩展的平台。尽管在其他地方，可能会有一些意想不到的发展，但我相信这个平台是EOS！
+的在未来的时间里，看到结果如何呈现出来，是很有趣的事情。但我相信，现在最重要的是，我们要尽快的有一个可扩展的平台。尽管在其他地方，可能会有一些意想不到的发展，但我相信这个平台是EOS！
 
-Am I missing something? Do I have it all wrong?
+我失去了一些东西？ 我有这一切是错误的吗？
 
 我是否有些不当之处？ 或者我全错？
 
