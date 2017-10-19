@@ -1,59 +1,59 @@
-## Introducing EOS.IO Application Stack--EOS.IO 应用程序栈
+## 介绍EOS。IO应堆--EOS。IO应用程序栈
 
 > 本文翻译自：https://steemit.com/eos/@eosio/introducing-eos-io-application-stack
 > 
-> 译者：区块链中文字幕组 [Xuming Meng](https://github.com/jonas-meng)
+> 译者：区块链中文字幕组[Xuming Meng](https://github.com/jonas-meng)
 > 
 > 翻译时间：2017-10-11
 
 * * *
 
-After three years of experience with BitShares and Steem, it has become abundantly clear that developing decentralized applications requires much more than a fast blockchain. It also requires infrastructure capable of offering a usable experience to millions of concurrent users. In the early days of steemit.com, users were expected to provide their own image hosting. This made the interface difficult to use and prone to broken images.
+经过三年的经验比特股和蒸汽，它已经变得非常清楚，发展分散化的应用程序需要更多一个快速的区块链的。 它还需要基础设施能够提供一个可用的经验数以百万计的并行的用户。 在早期的steemit.com用户预计提供自己的图像主持。 这使得接口难以使用和容易破碎的图像。
 
-在 BitShares 和 Steem 的三年经验之后，开发去中心化的应用程序需要的不仅仅是一个快速的区块链，它还需要能够为数百万并发用户提供可用体验的基础设施。在 steemit.com 的早期，用户期望提供自己的图像托管。这使得界面难以使用，容易出现图像破损。
+在比特股和蒸汽的三年经验之后，开发去中心化的应用程序需要的不仅仅是一个快速的区块链，它还需要能够为数百万并发用户提供可用体验的基础设施。。Steemit.com 的早期，用户期望提供自己的图像托管。这使得界面难以使用，容易出现图像破损。
 
-![image](https://github.com/BlockchainTranslator/EOS/blob/master/TechDoc/pics/introducing-eos.io-application-stack.png)
+![图像](https://github.com/BlockchainTranslator/EOS/blob/master/TechDoc/pics/introducing-eos.io-application-stack.png)
 
-With the EOS.IO software, we, at block.one, envision a world where block producers provide general purpose infrastructure that allows developers to build and deploy their applications without having to run any servers themselves. This includes applications as complex as [steemit](https://steemit.com/), [DTube](https://dtube.video/), and [decentralized exchanges](https://bitshares.org/).
+与EOS。IO软件，我们在块。一，设想一个世界里块生产商提供一般用途基础设施，使开发商建立和部署它们的应用程序没有任何服务器本身。 这包括应用程序的复杂[steemit](https://steemit.com/),[DTube](https://dtube.video/)，并[decentralized exchanges](https://bitshares.org/)的。
 
-使用 EOS.IO 软件，我们在 block.one 设想了一个世界，其中区块生产者提供通用基础架构，允许开发人员在无需运行任何服务器的情况下构建和部署应用程序。 这包括像 [steemit](https://steemit.com/)，[DTube](https://dtube.video/) 和 [decentralized exchanges](https://bitshares.org/) (去中心化交易所) 这样复杂的应用程序。
+使用EOS。IO以，则块。一个设想了一个世界，其中区块生产者提供通用基础架构，允许开发人员在无需运行任何服务器的情况下构建和部署应用程序。 这包括像[steemit](https://steemit.com/)，[DTube](https://dtube.video/)和[decentralized exchanges](https://bitshares.org/)(去中心化交易所)这样复杂的应用程序。
 
-## EOS.IO Storage--EOS.IO 存储
+## EOS。IO存储--EOS。IO。
 
-EOS.IO Storage is a decentralized file system designed to give everyone in the world with Internet access the ability to permanently store and host legal files which are accessible by any browser. Unlike current alternatives, there are no fees for storage or bandwidth on EOS.IO Storage. Built on IPFS, EOS.IO Storage is a service provided by block producers for those who hold a blockchain’s native tokens. EOS.IO block producers will replicate and host token-holders’ files on the IPFS network as well as provide https endpoints allowing anyone with a browser to access the files.
+EOS。IO储存是一个分散的文件的系统，旨在给世界上每一个人接入互联网的能力永久性地储存和主法律文件，这些文件均可通过任何浏览器。 不同于当前的替代品，没有收费存储或带宽上EOS。IO储存。 建立在指规数的，EOS。IO储存是一个服务提供的框生产者为那些持有一块链的母的标记。 EOS。IO块生产商将复制和主人令牌的持有人'的文件所指规数的网络，以及提供https端点，允许任何浏览器进入该文件。
 
-EOS.IO 存储是一种去中心化的文件系统，旨在为世界各地的互联网用户提供永久存储和托管任何浏览器可访问的合法文件的能力。与目前的替代方案不同，EOS.IO 存储没有存储或带宽费用。基于 IPFS，EOS.IO 存储是由区块生产者为持有该区块链的原生代币的用户提供的服务。EOS.IO 区块生产者将在 IPFS 网络上复制和托管代币持有者的文件，并提供允许任何人通过浏览器访问这些文件的 https 端点。
+EOS。IO存储是一种去中心化的文件系统，旨在为世界各地的互联网用户提供永久存储和托管任何浏览器可访问的合法文件的能力。与目前的替代方案不同，EOS。IO存储没有存储或带宽费用。于指规数的EOS。IO存储是由区块生产者为持有该区块链的原生代币的用户提供的服务。EOS。IO区块生产者将在指规数网络上复制和托管代币持有者的文件，并提供允许任何人通过浏览器访问这些文件的https端点。
 
-Collectively the producers will reach consensus on how much storage they are willing to provide in exchange for their compensation (block rewards). Block producers who offer more storage for the same reward are likely to earn more votes from token holders.
+统的生产商将达成协商一致意见有多少存储他们愿意提供在交换对他们的补偿(块的奖励). 块生产商提供更多的存储相同的奖励都可能赚取更多的选民，从令牌的持有人。
 
 生产者们将共同就他们愿意提供多少储存以换取他们的补偿（区块奖励）达成共识。 为相同奖励提供更多储存空间的区块生产者可能会从代币持有者那里获得更多的投票。
 
-More information on EOS.IO Storage will be provided in a future update.
+更多信息EOS。IO储存将提供一个未来的更新。
 
-有关 EOS.IO 存储的更多信息将在未来的更新中提供。
+。EOS。IO存储的更多信息将在未来的更新中提供。
 
-## EOS.IO Query Services--EOS.IO 查询服务
+## EOS。IO查询服务--EOS。IO后
 
-In addition to hosting files, block producers will be expected to run API nodes that are able to query the blockchain database state on behalf of applications. These APIs will likely be a combination of Graph QL and custom Web Assembly based queries. This makes it trivial for applications to get the information they need without having to run and maintain their own scalable hosting services.
+此外举办的文件，方框的生产商预计将运行API节点，都能够查询的区块链数据库的国家代表的应用。 这些Api会可能的组合图QL和定义的网组件基础的查询。 这使得微不足道的应用，以获得他们所需的信息，没有具有运行和维护自己的可扩展托管服务。
 
-除了托管文件外，区块生产者还将运行能够代替应用程序去查询块链数据库状态的 API 节点。这些 API 可能是基于 Graph QL 和 Web 组件的查询的组合。这使得应用程序无需运行和维护自己的可扩展托管服务就可以获得所需的信息。
+除了托管文件外，区块生产者还将运行能够代替应用程序去查询块链数据库状态的API节点。。API可能是基于图QL和网组件的查询的组合。这使得应用程序无需运行和维护自己的可扩展托管服务就可以获得所需的信息。
 
-block.one will design and publish open source micro-services that block producers can deploy to map the blockchain database state into more traditional databases for the purpose of scaling read access, maintainability, and additional indexing. This software will facilitate application developers and block producers to build web applications that interact with traditional database APIs.
+块。一个将设计和发布开放源微服务框生产者可以部署到地区块链数据库的状态进入较传统的数据库，用于扩展读访问、可维护性的和额外的索引。 该软件将有助于应用程序开发者和框生产者建立网络的应用程序的互动与传统的数据库Api。
 
-block.one将设计和发布开源微服务，区块生产者可以部署该微服务将块链接数据库状态映射到更传统的数据库中，其目的是为了扩展读访问能力，可维护性和附加索引。该软件将帮助应用程序开发人员和区块生产者构建与传统数据库 API 进行交互的Web应用程序。
+块。one将设计和发布开源微服务，区块生产者可以部署该微服务将块链接数据库状态映射到更传统的数据库中，其目的是为了扩展读访问能力，可维护性和附加索引。该软件将帮助应用程序开发人员和区块生产者构建与传统数据库API进行交互的Web应用程序。
 
-## Resource Limits--资源限制
+## 资源限制--资源限制
 
-Applications consume bandwidth, computation, and storage both on the blockchain and for the interface. Block producers will necessarily have to rate limit access to prevent abuse. This is accomplished for file downloading and API queries the same way bandwidth and CPU time is measured for blockchain updates. Users who hold a small amount of native tokens in a staking contract should be able to have a reasonable level of free access to most applications.
+应用程序使用带宽、计算和储存两块链接口。 块生产商将有必要速度限制的访问，以防止滥用。 这是完成对于文件的下载和API查询的方式相同带宽和CPU测量时间用于区块链的更新。 用户持有少量的本地标记，在一桩的合同应该可以有一个合理水平的免费进入大多数应用程序。
 
-应用程序在区块链和接口上都占用带宽，计算和存储。区块生产者必须通过访问限制来防止滥用。对于文件下载和 API 查询的访问限制是通过和测量块链更新的带宽和CPU时间相同的方式来实现的。在合同中持有少量原生代币的用户应该具有对大多数应用程序免费访问的合理级别。
+应用程序在区块链和接口上都占用带宽，计算和存储。区块生产者必须通过访问限制来防止滥用。对于文件下载和API查询的访问限制是通过和测量块链更新的带宽和CPU时间相同的方式来实现的。在合同中持有少量原生代币的用户应该具有对大多数应用程序免费访问的合理级别。
 
-The usage model will support balancing resource usage billing to either the individual users downloading the file or to the individual who uploaded it in the first place. This mirrors the model where websites pay to provide hosting but adds the flexibility of transparently moving the bill and rate limiting to the users who ultimately have control over their consumption. This is critical for bandwidth intensive applications like dtube.com .
+使用模型将支持平衡资源的使用费的各个用户下载的文件或个人上传它放在第一位。 这个镜子的模式网站的支付提供主机，但增加了灵活性的透明的运动的法案和速度限制的用户最终控制自己的消费。 这是至关重要带宽密集型应用程序喜欢dtube.com 中。
 
-资源使用模型将支持在下载文件的个人用户和上传文件的用户之间平衡资源使用量的费用。这个模式复制了网站付费提供托管的模式，但增加了将账单和利率限制透明地转移到控制消费的用户的灵活性。这对于像 dtube.com 这样的带宽密集型应用程序至关重要。
+资源使用模型将支持在下载文件的个人用户和上传文件的用户之间平衡资源使用量的费用。这个模式复制了网站付费提供托管的模式，但增加了将账单和利率限制透明地转移到控制消费的用户的灵活性。这对于像dtube.com 这样的带宽密集型应用程序至关重要。
 
-## Custom Application Infrastructure--定制应用基础架构
+## 定制应用程序的基础设施--定制应用基础架构
 
-block.one recognizes that there are limits to what kind of applications can be built using the general purpose infrastructure provided by block producers. Specifically, applications that require server-side rendering (e.g., steemit) or that require custom database indices maintained by custom micro-services (e.g., market history) may require custom server infrastructure hosted by the application developer or other parties. Developers of these applications can benefit from the same scalable architecture used by block producers to deploy their own customized API and Query Services. This will help developers rapidly bring scalable application infrastructure to market.
+块。一个认识到，有限制的是什么样的应用程序可以使用的通用基础设施提供的框生产者。 具体而言，需要应用服务器的端呈现(例如，steemit)或需要定义数据库的指数维持通过定义微服务(例如，市场历史)可能需要定制服务器基础结构托管的应用程序开发者或其他缔约方。 开发这些申请可以受益于相同的可扩展的结构采用通过块生产商部署自己定制API和查询服务。 这将有助于迅速开发带来的可扩展应用基础设施市场。
 
-block.one 认识到在区块生成者提供的通用基础架构上构建应用程序的局限性。具体来说，需要服务端呈现（如，steemit）或需要由定制微服务维护的自定义数据库索引（例如，市场历史）的应用程序可能需要由应用程序开发人员或其他方托管的定制服务器基础架构。这些应用程序的开发人员可以从被区块生产者用来部署自己的定制 API 查询服务的相同的可扩展架构中获益。这将有助于开发人员将可扩展应用程序基础架构带入市场
+块。一个认识到在区块生成者提供的通用基础架构上构建应用程序的局限性。具体来说，需要服务端呈现（如，steemit）或需要由定制微服务维护的自定义数据库索引（例如，市场历史）的应用程序可能需要由应用程序开发人员或其他方托管的定制服务器基础架构。这些应用程序的开发人员可以从被区块生产者用来部署自己的定制API查询服务的相同的可扩展架构中获益。这将有助于开发人员将可扩展应用程序基础架构带入市场
