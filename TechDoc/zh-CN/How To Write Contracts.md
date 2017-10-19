@@ -1,115 +1,115 @@
-> 原文链接：<https://eosio.github.io/eos/group__contractdev.html>
+> 原文链接：[https://eosio的。审查的。io/eos/组__contractdev的。html](https://eosio.github.io/eos/group__contractdev.html)
 > 
-> 翻译：区块链中文字幕组 - [张奎](https://github.com/byzhangkui) [胡亮](https://github.com/gumoon)
+> 的：区块链中文字幕组-[张奎](https://github.com/byzhangkui) [胡亮](https://github.com/gumoon)
 > 
-> 审核：区块链中文字幕组 - [梓岑](https://yoyow.org/)
+> 信：区块链中文字幕组-[梓岑](https://yoyow.org/)
 
-# How To Write Contracts EOS 如何为 EOS.IO 编写智能合约
+# 如何写入合同EOS如何为EOS。IO编写智能合约
 
-Introduction to writing contracts for EOS.IO.
+导言写入合同EOS。IO.
 
-EOS.IO 合约编写简介。
+EOS。IO合约编写简介。
 
-## Modules 模块
+## 模块，模块
 
-[Database API](#)
+[数据库API](#)
 
-APIs that store and retreive data on the blockchain
+Api存储和检索数据的区块链
 
 在区块链上存储和检索数据的接口。
 
-[Math API](#)
+[数学API](#)
 
-Defines common math functions.
+定义的共同学的功能。
 
 定义常用数学函数。
 
-[Message API](#)
+[消息API](#)
 
-Define API for querying message properties.
+定义API，用于查询信息的性质。
 
 定义消息属性查询接口。
 
-[Console API](#)
+[控制台API](#)
 
-Enables applications to log/print text messages.
+使用登录/打印文本信息。
 
 支持应用程序记录/打印文本消息。
 
-[Token API](#)
+[令牌API](#)
 
-Defines the ABI for interfacing with standard-compatible token messages and database tables.
+定义ABI用于与标准兼容的令牌的信息和数据库的数据表。
 
-定义ABI（应用系统二进制接口），实现与标准兼容的 token 消息及数据库表之间的交互
+定义ABI（应用系统二进制接口），实现与标准兼容的令牌消息及数据库表之间的交互
 
-[Builtin Types](#)
+[内置的类型](#)
 
-Specifies typedefs and aliases.
+指定typedef和别名。
 
 指定类型定义和别名。
 
-## Detailed Description 详细说明
+## 详细描图
 
-### Background 背景
+### 背景背
 
-EOS.IO contracts (aka applications) are deployed to a blockchain as pre-compiled Web Assembly (aka WASM). WASM is compiled from C/C++ using LLVM and clang, which means that you will require knowledge of C/C++ in order to develop your blockchain applications. While it is possible to develop in C, we strongly recommend that all developers use the EOS.IO C++ API which provides much stronger type safety and is generally easier to read.
+EOS。IO合同(aka应用程序)部署到区块链作为预先编制的网会(又名WASM). WASM是编制从C/使用C++编程，并铛，这意味着你会需要的知识C/C++为了发展你的块链中的应用。 虽然这是可能的发展在C，我们强烈建议，所有开发人员使用的EOS。IO C++API其提供更强大的类型的安全和一般更易于阅读。
 
-EOS.IO 合约（应用程序）以预编译的 Web Assembly（WASM）形式部署在区块链上。WASM 使用 C/C++ 编写，通过 LLVM 和 clang 编译，这意味着，开发 EOS.IO 智能合约首先需要具备 C/C++ 基础。不过，虽然可以用 C 语言来开发，但我们强烈推荐使用C++ 接口。C++ 接口是强类型安全性的 ，并且也更容易阅读。
+EOS。IO合约（序）以预编译的网组件（WASM）形式部署在区块链上。WASM使用C++编程，通过编程和铛编译中的许EOS。IO智能合约首先需要具备C/C++。。中虽然可以用C语言来开发，但我们强烈推荐使用C++口。C++接口是强类型安全性的，并且也更容易阅读。
 
-### Application Structure 应用程序结构
+### 应用程序结构应用程序结构
 
-EOS.IO applications are designed around event (aka message) handlers that respond to user actions. For example, a user might transfer tokens to another user. This event can be processed and potentially rejected by the sender, the receiver, and the currency application itself.
+EOS。IO应用程序的设计围绕事件(又名信息)的处理，应对用户的行动。 例如，一个用户可能会转移标记的另一个用户。 这一事件可以被处理以及可能被拒绝通过发送、接收和货币应用程序本身。
 
-EOS.IO 应用程序是围绕响应用户行为的事件（消息）处理来设计的。如用户间的代币转账交易会触发一个事件。这个事件可以被发送方，接收方或者当前应用程序本身进行处理或者拒绝。
+EOS。IO应用程序是围绕响应用户行为的事件（息）处理来设计的。如用户间的代币转账交易会触发一个事件。这个事件可以被发送方，接收方或者当前应用程序本身进行处理或者拒绝。
 
-As an application developer you get to decide what actions users can take and which handlers may or must be called in response to those events.
+作为一个应用程序开发者你能决定什么行动，用户可以采取和处理程序可以或必须在应对这些事件。
 
 开发者需要决定用户可以触发哪些行为，以及哪些处理函数应该或者必须被调用，用以作为对这些事件的响应。
 
-#### Entry Points 入口点
+#### 入境点入口点
 
-EOS.IO applications have a apply which is like main in traditional applications:
+EOS。IO应用程序都有一个适用这样主要在传统的应用程序：
 
-EOS.IO 应用程序提供 apply 方法作为入口点，类似传统应用程序的 main 方法：
+EOS。IO应用程序提供适用方法作为入口点，类似传统应用程序的主要方法：
 
 ```C
-extern "C" {
-   void init();
-   void apply( uint64_t code, uint64_t action );
+外部"C"{
+void init();
+无效的适用(uint64_t码，uint64_t行动);
 }
 ```
 
-main is give the arguments code and action which uniquely identify every event in the system. For example, code could be a currency contract and action could be transfer. This event (code,action) may be passed to several contracts including the sender and receiver. It is up to your application to figure out what to do in response to such an event.
+主要是给出的参数码和行动，其唯一标识的每个事件的系统。 例如，代码可能是一个汇合同和行动可能会转移。 这个事件(代码，行动)可以通过几个合同包括发送者和接收者。 这是给你的应用程序，以弄清楚该怎么做为了应对这样的一个事件。
 
-apply 方法包含 code 和 action 两个参数，在系统内通过这两个参数可唯一标识每个事件。例如，code 可以是一个现金合约，而 action 就是转移的行为。这个事件（code，action）可以被传递到包括发送者和接收者的多个合约中。如何响应一个事件, 由应用程序确定。
+适用方法包含码和行动，这的在系统内通过这两个参数可唯一标识每个事件。以码可以是一个现金合约，而行动就是转移的行为。这个事件（代码的行动）可以被传递到包括发送者和接收者的多个合约中。如何响应一个事件,由应用程序确定。
 
-init is another entry point that is called once immediately after loading the code. It is where you should perform one-time initialization of state.
+init是另一个切入点就是所谓的一次后立即载入代码。 这是你应该进行一次初始化的状态。
 
-init 是另外一个程序入口点，在加载代码后会被立即调用，且只被调用一次的。在这里你可以实现一次性的状态初始化。
+init是另外一个程序入口点，在加载代码后会被立即调用，且只被调用一次的。在这里你可以实现一次性的状态初始化。
 
-#### Example Apply Entry Handler 入口处理函数的示例
+#### 例如申请入境的处理程序入口处理函数的示例
 
-Generally speaking, you should use your entry handler to dispatch events to functions that implement the majority of your logic and optionally reject events that your contract is unable or unwilling to accept.
+一般来说，你应该用你的入口处理程序，派遣事件的功能，实现大多数的逻辑和选择地拒绝的事件，合同无法或不愿意接受。
 
-一般来说，你应该使用入口处理函数去分发事件到对应的方法。这些方法实现主要的处理逻辑，或者选择性地拒绝合约不识别或者不应该接受的事件。
+一你应该使用入口处理函数去分发事件到对应的方法。这些方法实现主要的处理逻辑，或者选择性地拒绝合约不识别或者不应该接受的事件。
 
 ```C
-extern "C" {
-   void apply( uint64_t code, uint64_t action ) {
-      if( code == N(currency) ) {
-         if( action == N(transfer) )
-            currency::apply_currency_transfer( currentMessage< currency::Transfer >() );
-      } else {
-         assert( false, "rejecting unexpected event" );
-      }
-   }
+外部"C"{
+无效的适用(uint64_t码，uint64_t行动){
+如果(代码==N(货币)){
+如果(action==N(转让))
+货币：:apply_currency_transfer(currentMessage<货币：：传输>());
+}else{
+assert(假的，"拒绝的意外事件");
+}
+}
 }
 ```
 
-> **Note 说明**
+> **注意说明**
 > 
-> When defining your entry points it is required that they are placed in an extern "C" code block so that c++ name mangling[^footnote] does not get applied to the function.
+> 当限定入境点，这是需要它们都放在一个外部"C"代码块，使用c++名mangling[^footnote]没有得到适用的功能。
 > 
-> 当你定义入口点时，需要将代码放在 extern "C" 代码块中，使得 C++ 名字修饰<sup id="fnref2:footnote"><a href="#fn:footnote" class="footnote-ref">1</a></sup>不会应用到该方法上。
+> 当你定义入口点时，需要将代码放在外部"C"代码块中，使用C++名字修饰<sup id="fnref2:footnote"><a href="#fn:footnote" class="footnote-ref">1</a></sup>不会应用到该方法上。
 
-[^footnote]: *name mangling* 名字修饰，又译做名字粉碎、名字重整，是编译器在函数、结构体、类或其它的数据类型的名字中编码附加信息一种方法，以消除二义性。应用场景如区分重载函数，标识调用约定等。[&#8617;](#fnref2:footnote){.footnote-backref}
+[^footnote]: *name mangling*名字修饰，又译做名字粉碎、名字重整，是编译器在函数、体、类或其它的数据类型的名字中编码附加信息一种方法，以消除二义性。应用场景如区分重载函数，标识调用约定等。[&#8617;](#fnref2:footnote){.footnote-backref}
